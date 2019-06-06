@@ -144,9 +144,7 @@ body {
 	justify-content: center;
 }
 .services-item svg {
-	width: 180px;
-	height: 155px;
-	align-items: center;
+	margin: 0 auto;
 }
 .services-item p {
 	font-family: 'PT Serif', serif;
