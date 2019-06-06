@@ -71,6 +71,7 @@ body {
 	color: white;
 } 
 .register {
+	text-align: center;
 	position: absolute;
 	top: 250px;
 	right: 0;
@@ -138,6 +139,9 @@ body {
 }
 .services-item {
 	width: 20%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 .services-item svg {
 	width: 180px;
@@ -196,9 +200,33 @@ body {
 	justify-content: space-between;
 } 
 .pricing-item {
+	position: relative;
 	background-color: white;
 	width: 30%;
+	margin: 0 20px;
 	text-align: center;
+}
+.card__popular {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 100px 100px 0 0;
+    border-color: #5cb75c transparent transparent;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+}
+.card__popular span {
+    position: absolute;
+    z-index: 1;
+    top: -90px;
+    left: 35px;
+    padding: 5px 10px;
+    line-height: 1;
+    font-weight: 400;
+    color: #fff;
+    transform: translateX(-50%) rotate(-45deg);
 }
 .pricing h3, .gallery h2 {
 	font-family: 'Montserrat', sans-serif;
@@ -235,11 +263,12 @@ body {
 }
 .gallery {
 	background-color: white;
-	padding-bottom: 120px;
-	padding-top: 140px;
+	padding-bottom: 40px;
+	padding-top: 40px;
 }
-.gallery-left {
+.gallery-left, .gallery-right {
 	width: 50%;
+	margin-bottom: 60px;
 	float: left;
 }
 .gallery-left p {
@@ -259,11 +288,12 @@ body {
 }
 .Testimonial-block {
 	width: 80%;
+	margin-top: 20px;
 	padding: 10px 40px 20px 20px;
 	position: relative;
 	background-color: #5dbbc1;
 }
-.Testimonial-block p {
+.Testimonial-block p, footer p {
     font-family: 'PT Serif', serif;
 	font-size: 1.111em;
 	color: white;
@@ -278,22 +308,19 @@ body {
 	right: -60px;
 	top: 5px;
 }
-.gallery-right {
-	width: 50%;
-	float: left;
-}
 .gallery-right h2 {
 	color: #5dbbc1;
 }
 .gallery-block {
 	width: 90%;
+	margin-left: 50px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	margin-bottom: 40px;
 }
 .gallery-block-item {
-	display: inline-block;
 	margin: 0;
     padding: 0;
 }
@@ -311,12 +338,35 @@ body {
 	height: 133px; background-image: url(img/gallery6.png);}
 
 .gallery-right a {
+	padding-left: 140px;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.111em;
 	color: black;
 	font-weight: bold;
 	text-transform: uppercase;
 	text-decoration: none;
-	text-align: center;
-	margin-top: 30px;
+}
+footer {
+	padding: 30px 0;
+	width: 100%;
+	height: 53px;
+	display: flex;
+	justify-content: space-between;
+	background-color: #130e27;
+}
+footer a, footer p{
+	margin: 0;
+	line-height: 55px;
+	text-align: left;
+}
+footer a { color: #58afb7;}
+footer img {
+	width: 151px;
+	height: 53px;
+}
+.clearfix {
+	display: block;
+	content: "";
+	width: 100%;
+	clear: both;
 }
